@@ -125,7 +125,7 @@ rules).
             </tr>
             <tr>
                 <td>Role</td>
-                <td><code>*_*</code></td>
+                <td><code>*_ROLE_*</code></td>
                 <td>
                     The prefix matches the name of the role, followed by an underscore, then a suffix that describes the
                     variable's purpose.
