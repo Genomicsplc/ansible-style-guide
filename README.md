@@ -204,7 +204,21 @@ rules).
                         of that role. Use of such variables should generally be kept to a minimum.
                     </p>
                     <p>
-                        The prefix should match the name of the role, followed by <code>_role_FACT_</code>, then a
+                        The prefix should match the name of the role, followed by <code>_ROLE_FACT_</code>, then a
+                        suffix that describes the variable's purpose.
+                    </p>
+                </td>
+                <td><code>roles/$0/tasks/*.yml</code></td>
+            </tr>
+            <tr>
+                <td>Registered variable</td>
+                <td><code>*_ROLE_REGISTER_*</code></td>
+                <td>
+                    <p>
+                        You can create variables from the output of an Ansible task with the task keyword <code>register</code>. You can use registered variables in any later tasks in your play.
+                    </p>
+                    <p>
+                        The prefix should match the name of the role, followed by <code>_ROLE_REGISTER_</code>, then a
                         suffix that describes the variable's purpose.
                     </p>
                 </td>
