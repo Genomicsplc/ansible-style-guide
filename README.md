@@ -204,7 +204,21 @@ rules).
                         of that role. Use of such variables should generally be kept to a minimum.
                     </p>
                     <p>
-                        The prefix should match the name of the role, followed by <code>_role_FACT_</code>, then a
+                        The prefix should match the name of the role, followed by <code>_ROLE_FACT_</code>, then a
+                        suffix that describes the variable's purpose.
+                    </p>
+                </td>
+                <td><code>roles/$0/tasks/*.yml</code></td>
+            </tr>
+            <tr>
+                <td>Role Register</td>
+                <td><code>*_ROLE_REGISTER_*</code></td>
+                <td>
+                    <p>
+                        A role register is a variable defined implicitly within a role by adding a <code>register</code> property to a task definition. These should _only_ be referenced from within the role itself (otherwise you should promote them to a fact as above), but nonetheless it is useful to namespace them to avoid collisions with other variables, including possibly a subsequent role fact with the same suffix.
+                    </p>
+                    <p>
+                        The prefix should match the name of the role, followed by <code>_ROLE_REGISTER_</code>, then a
                         suffix that describes the variable's purpose.
                     </p>
                 </td>
